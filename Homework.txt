@@ -1,0 +1,74 @@
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$  git config --global user.email "sonalaletina1@gmail.com"
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$  git config --global user.name "Sofia Laletina"
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ mc
+
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ > main.c
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git add main.c
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git commit -m "Add main.c"
+[main (root-commit) 1a60270] Add main.c
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.c
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git branch feature
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git branch -l
+  feature
+* main
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git checkout feature
+Switched to branch 'feature'
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ > feature.c
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git add feature.c
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git commit -m "Add feature.c"
+[feature c0e9ee9] Add feature.c
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.c
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git merge feature
+Updating 1a60270..c0e9ee9
+Fast-forward
+ feature.c | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.c
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git push
+Username for 'https://github.com': ^C
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/sanches/.ssh/id_rsa):
+Created directory '/home/sanches/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/sanches/.ssh/id_rsa
+Your public key has been saved in /home/sanches/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:8rCG3XKNBd0RVAs+i6INLI+xEdZ82W4PBIAtnJB+mKc sanches@DESKTOP-6RCPMH2
+The key's randomart image is:
++---[RSA 3072]----+
+|  .+ +...  .=o.  |
+|  . =o.  = o o . |
+| . oo.o + + + .  |
+|  +.oo . + . o   |
+|   ++ = S * .    |
+|  E  X X * o     |
+|    + B * . .    |
+|     . o         |
+|                 |
++----[SHA256]-----+
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ cat /home/sanches/.ssh/id_rsa.pub
+*****
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git remote set-url origin git@github.com:SofiLole/git01.03.git
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$ git push
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 429 bytes | 429.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:SofiLole/git01.03.git
+ * [new branch]      main -> main
+sanches@DESKTOP-6RCPMH2:~/stud/git01.03$
